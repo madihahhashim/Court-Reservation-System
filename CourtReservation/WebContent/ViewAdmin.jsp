@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-	<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
@@ -118,7 +120,7 @@
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <hr class="sidebar-divider d-none d-md-block">     
         </ul>
         <!-- End of Sidebar -->
 
@@ -185,44 +187,61 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                     <!-- Content Row -->
-                    <div class="row">
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
 
-                        <!-- Content Column -->
+                    <!-- Content Row -->
+
+                    <div class="row">
                         <div class="col mb-4">
 
-                            <!-- Project Card Example -->
+                            <!-- Booking -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Update Customer</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">View Admin</h6>
                                 </div>
                                 <div class="card-body">
-                                     <form class="user" action="UpdateCustomerController" method="post">
-                                  <div class="form-group">
-			                    <input type="text" class="form-control form-control-user" name="custid"   placeholder="Customer ID" value="<c:out value="${customer.custid}"/>" required>
-			                  </div>
-                                <div class="form-group">
-			                    <input type="text" class="form-control form-control-user" name="custname"  placeholder="CUSTOMER'S NAME" value="<c:out value="${customer.custname}"/>" required>
-			                  </div>
-			                  <div class="form-group">
-			                    <input type="text" class="form-control form-control-user" name="custaddress"  placeholder=" Address"  value="<c:out value="${customer.custaddress}"/>" required>
-			                  </div>
-			                  <div class="form-group">
-			                    <input type="email" class="form-control form-control-user" name="custemail"  placeholder="Email" value="<c:out value="${customer.custemail}"/>" required>
-			                  </div>
-			                  <div class="form-group">
-			                    <input type="password" class="form-control form-control-user" name="custpass" placeholder="Password" value="<c:out value="${customer.custpass}"/>" required>
-			                  </div>
-			                   <div class="form-group">
-			                    <input type="number" class="form-control form-control-user" name="custphone"  placeholder="Phone Number"  value="<c:out value="${customer.custphone}"/>" required>
-			                  </div>           
-                                <input type="submit" value="Update" class="btn btn-primary btn-user btn-block">
-                                
-                            </form>
-                                </div>
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Admin's Name</th>
+                                            <th>Address</th>
+                                            <th>Email</th>
+                                            <th>Password</th>
+                                            <th>Phone Number </th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                         
+                                    <tbody>
+                                   <c:forEach items="${admin}" var="admin" begin="0" varStatus="count">
+                                        <tr>
+                                        <td><c:out value="${admin.adminid}"/></td>
+							            <td><c:out value="${admin.adname}" /></td>
+							            <td><c:out value="${admin.address}" /></td>
+							            <td><c:out value="${admin.ademail}" /></td>
+							             <td><c:out value="${admin.adpass}" /></td>
+							             <td><c:out value="${admin.adphone}" /></td>
+                                            <td><a href="UpdateAdminController?action=update&adminid=<c:out
+            value="${admin.adminid}" />" class="w3-btn w3-green w3-round-large" >Update</a></td>
+              <td><a href="DeleteAdminController?action=delete&adminid=<c:out
+            value="${admin.adminid}" />" class="w3-btn w3-red w3-round-large">Delete</a></td>
+                                        </tr>
+                                        </c:forEach>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                             </div>
 
-                            
                         </div>
                     </div>
 
@@ -236,7 +255,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Venus Pet System</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>

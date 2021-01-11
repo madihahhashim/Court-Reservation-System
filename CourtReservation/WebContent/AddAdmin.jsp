@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-	<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+    
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
@@ -119,6 +120,7 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+           
         </ul>
         <!-- End of Sidebar -->
 
@@ -194,30 +196,31 @@
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Update Customer</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Add Admin</h6>
                                 </div>
                                 <div class="card-body">
-                                     <form class="user" action="UpdateCustomerController" method="post">
-                                  <div class="form-group">
-			                    <input type="text" class="form-control form-control-user" name="custid"   placeholder="Customer ID" value="<c:out value="${customer.custid}"/>" required>
+                                     <form  action="AddAdminController" method="post">
+                                     <div class="form-group">
+			                    <input type="hidden" class="form-control form-control-user" name="adminid"  required>
 			                  </div>
-                                <div class="form-group">
-			                    <input type="text" class="form-control form-control-user" name="custname"  placeholder="CUSTOMER'S NAME" value="<c:out value="${customer.custname}"/>" required>
-			                  </div>
-			                  <div class="form-group">
-			                    <input type="text" class="form-control form-control-user" name="custaddress"  placeholder=" Address"  value="<c:out value="${customer.custaddress}"/>" required>
+                               <div class="form-group">
+			                    <input type="text" class="form-control form-control-user" name="adname"  pattern="^[a-zA-Z/@/-/./'/\s ]+$" title="Name should only contain letters,@,',- . e.g. john" placeholder="Admin's Name" required>
 			                  </div>
 			                  <div class="form-group">
-			                    <input type="email" class="form-control form-control-user" name="custemail"  placeholder="Email" value="<c:out value="${customer.custemail}"/>" required>
+			                    <input type="text" class="form-control form-control-user" name="address"  placeholder="Address"   required>
 			                  </div>
 			                  <div class="form-group">
-			                    <input type="password" class="form-control form-control-user" name="custpass" placeholder="Password" value="<c:out value="${customer.custpass}"/>" required>
+			                    <input type="email" class="form-control form-control-user" name="ademail"  placeholder="Email"   required>
 			                  </div>
-			                   <div class="form-group">
-			                    <input type="number" class="form-control form-control-user" name="custphone"  placeholder="Phone Number"  value="<c:out value="${customer.custphone}"/>" required>
-			                  </div>           
-                                <input type="submit" value="Update" class="btn btn-primary btn-user btn-block">
-                                
+			                         
+			                  <div class="form-group">
+			                    <input type="password" class="form-control form-control-user" name="adpass"  placeholder="Password"  required>
+			                  </div>
+			                  <div class="form-group">
+			                    <input type="number" class="form-control form-control-user" name="adphone" placeholder="Phone Number" required>
+			                  </div>
+			                   
+                                <input type="submit" value="Submit" class="btn btn-primary btn-user btn-block">
                             </form>
                                 </div>
                             </div>

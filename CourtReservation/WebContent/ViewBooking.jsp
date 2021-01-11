@@ -3,8 +3,9 @@
    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
+
 <head>
 	<meta charset="ISO-8859-1">
     <meta charset="utf-8">
@@ -13,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Venus Pet</title>
+        <title>Court Reservation System</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -39,7 +40,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Venus Pet</div>
+                <div class="sidebar-brand-text mx-3">Court Reservation</div>
             </a>
 
             <!-- Divider -->
@@ -57,20 +58,20 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Admin
+                Court
             </div>
 
-             <!-- Nav Item - Admin -->
+              <!-- Nav Item - Admin -->
              <li class="nav-item">
-                <a class="nav-link" href="add_admin.jsp">
+                <a class="nav-link" href="AddCourt.jsp">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Add Admin</span></a>
+                    <span>Add Court</span></a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="view_admin.jsp">
+                <a class="nav-link" href="ViewCourtController">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>View Admin</span></a>
+                    <span>View Court</span></a>
             </li>
 
 
@@ -79,21 +80,43 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Staff
+                Booking
             </div>
 
             <!-- Nav Item - Admin -->
              <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="AddBooking.jsp">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Add Staff</span></a>
+                    <span>Add Booking</span></a>
             </li>
             
              <!-- Nav Item - Admin -->
              <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="ViewBookingController">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>View Staff</span></a>
+                    <span>View Booking</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            
+             <!-- Heading -->
+            <div class="sidebar-heading">
+                Customer
+            </div>
+
+            <!-- Nav Item - Admin -->
+             <li class="nav-item">
+                <a class="nav-link" href="AddCustomer.jsp">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Add Customer</span></a>
+            </li>
+            
+             <!-- Nav Item - Admin -->
+             <li class="nav-item">
+                <a class="nav-link" href="ViewCustomerController">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>View Customer</span></a>
             </li>
 
             <!-- Divider -->

@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Venus Pet System</title>
+        <title>Court Reservation System</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -38,7 +38,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Venus Pet</div>
+                <div class="sidebar-brand-text mx-3">Court Reservation</div>
             </a>
 
             <!-- Divider -->
@@ -56,20 +56,20 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Service
+                Court
             </div>
 
               <!-- Nav Item - Admin -->
              <li class="nav-item">
-                <a class="nav-link" href="add_admin.jsp">
+                <a class="nav-link" href="AddCourt.jsp">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Add Service</span></a>
+                    <span>Add Court</span></a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="view_admin.jsp">
+                <a class="nav-link" href="ViewCourtController">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>View Service</span></a>
+                    <span>View Court</span></a>
             </li>
 
 
@@ -78,21 +78,43 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Staff
+                Booking
             </div>
 
             <!-- Nav Item - Admin -->
              <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="AddBooking.jsp">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Add Staff</span></a>
+                    <span>Add Booking</span></a>
             </li>
             
              <!-- Nav Item - Admin -->
              <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="ViewBookingController">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>View Staff</span></a>
+                    <span>View Booking</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            
+             <!-- Heading -->
+            <div class="sidebar-heading">
+                Customer
+            </div>
+
+            <!-- Nav Item - Admin -->
+             <li class="nav-item">
+                <a class="nav-link" href="AddCustomer.jsp">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Add Customer</span></a>
+            </li>
+            
+             <!-- Nav Item - Admin -->
+             <li class="nav-item">
+                <a class="nav-link" href="ViewCustomerController">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>View Customer</span></a>
             </li>
 
             <!-- Divider -->
@@ -173,7 +195,7 @@
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Update Booking</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Update Court</h6>
                                 </div>
                                 <div class="card-body">
                                      <form class="user" action="UpdateCourtController" method="post">
@@ -189,7 +211,7 @@
 			                  
 			                                
                                 <input type="submit" value="Update" class="btn btn-primary btn-user btn-block">
-                                <input type="submit" value="Delete" class="btn btn-warning btn-user btn-block">
+                                
                             </form>
                                 </div>
                             </div>

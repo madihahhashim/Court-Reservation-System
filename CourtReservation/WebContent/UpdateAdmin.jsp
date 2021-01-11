@@ -194,27 +194,27 @@
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Update Customer</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Update Admin</h6>
                                 </div>
                                 <div class="card-body">
                                      <form class="user" action="UpdateCustomerController" method="post">
                                   <div class="form-group">
-			                    <input type="text" class="form-control form-control-user" name="custid"   placeholder="Customer ID" value="<c:out value="${customer.custid}"/>" required>
+			                    <input type="text" class="form-control form-control-user" name="adminid"   placeholder="Customer ID" value="<c:out value="${admin.adminid}"/>" required>
 			                  </div>
                                 <div class="form-group">
-			                    <input type="text" class="form-control form-control-user" name="custname"  placeholder="CUSTOMER'S NAME" value="<c:out value="${customer.custname}"/>" required>
+			                    <input type="text" class="form-control form-control-user" name="adname"  placeholder=" Name" value="<c:out value="${admin.adname}"/>" required>
 			                  </div>
 			                  <div class="form-group">
-			                    <input type="text" class="form-control form-control-user" name="custaddress"  placeholder=" Address"  value="<c:out value="${customer.custaddress}"/>" required>
+			                    <input type="text" class="form-control form-control-user" name="address"  placeholder=" Address"  value="<c:out value="${admin.address}"/>" required>
 			                  </div>
 			                  <div class="form-group">
-			                    <input type="email" class="form-control form-control-user" name="custemail"  placeholder="Email" value="<c:out value="${customer.custemail}"/>" required>
+			                    <input type="email" class="form-control form-control-user" name="ademail"  placeholder="Email" value="<c:out value="${admin.ademail}"/>" required>
 			                  </div>
 			                  <div class="form-group">
-			                    <input type="password" class="form-control form-control-user" name="custpass" placeholder="Password" value="<c:out value="${customer.custpass}"/>" required>
+			                    <input type="password" class="form-control form-control-user" name="adpass" placeholder="Password" value="<c:out value="${admin.adpass}"/>" required>
 			                  </div>
 			                   <div class="form-group">
-			                    <input type="number" class="form-control form-control-user" name="custphone"  placeholder="Phone Number"  value="<c:out value="${customer.custphone}"/>" required>
+			                    <input type="number" class="form-control form-control-user" name="adphone"  placeholder="Phone Number"  value="<c:out value="${admin.adphone}"/>" required>
 			                  </div>           
                                 <input type="submit" value="Update" class="btn btn-primary btn-user btn-block">
                                 
